@@ -1,0 +1,382 @@
+ <!DOCTYPE html>
+<html lang="en"> 
+<head>
+<link rel="stylesheet" href="C:\Users\Srihari\OneDrive\Documents\Desktop\Admin\CategoryListCSS.css">
+<title>Category List</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+   --blue:#6495ED;
+   --green:#27ae60;
+   --black:#333;
+   --white:#fff;
+   --bg-color:#eee;
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --border:.1rem solid var(--black);
+}
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+.btn{
+   display: block;
+   width: 100%;
+   cursor: pointer;
+   border-radius: .5rem;
+   margin-top: 1rem;
+   font-size: 1.7rem;
+   padding:1rem 3rem;
+   background: var(--green);
+   color:var(--white);
+   text-align: center;
+}
+
+.btn:hover{
+   background: var(--black);
+}
+.btn1{
+   display: block;
+   width: 10%;
+   cursor: pointer;
+   border-radius: .5rem;
+   margin-top: 1rem;
+   font-size: 1rem;
+   padding:1rem 3rem;
+   background: var(--blue);
+   color:var(--white);
+   text-align: center;
+   margin-left:100px;
+}
+
+.btn1:hover{
+   background: var(--black);
+}
+
+.message{
+   display: block;
+   background: var(--bg-color);
+   padding:1.5rem 1rem;
+   font-size: 2rem;
+   color:var(--black);
+   margin-bottom: 2rem;
+   text-align: center;
+}
+
+.container{
+   max-width: 1200px;
+   padding:2rem;
+   margin:0 auto;
+}
+
+.admin-product-form-container.centered{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   
+}
+
+.admin-product-form-container .form{
+   max-width: 50rem;
+   margin:0 auto;
+   padding:2rem;
+   border-radius: .5rem;
+   background: var(--bg-color);
+}
+
+.admin-product-form-container .form h3{
+   text-transform: uppercase;
+   color:var(--black);
+   margin-bottom: 1rem;
+   text-align: center;
+   font-size: 2.5rem;
+}
+
+.admin-product-form-container .form .box{
+   width: 100%;
+   border-radius: .5rem;
+   padding:1.2rem 1.5rem;
+   font-size: 1.7rem;
+   margin:1rem 0;
+   background: var(--white);
+   text-transform: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+   --blue:#6495ED;
+   --green:#27ae60;
+   --black:#333;
+   --white:#fff;
+   --bg-color:#eee;
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --border:.1rem solid var(--black);
+}
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+.btn{
+   display: block;
+   width: 100%;
+   cursor: pointer;
+   border-radius: .5rem;
+   margin-top: 1rem;
+   font-size: 1.7rem;
+   padding:0rem 1rem;
+   background: var(--green);
+   color:var(--white);
+   text-align: center;
+}
+
+.btn:hover{
+   background: var(--black);
+}
+
+.btn1{
+   display: block;
+   width: 10%;
+   cursor: pointer;
+   border-radius: .5rem;
+   margin-top: 1rem;
+   font-size: 1rem;
+   padding:1rem 3rem;
+   background: var(--blue);
+   color:var(--white);
+   text-align: center;
+   margin-left:100px;
+}
+
+.btn1:hover{
+   background: var(--black);
+}
+.message{
+   display: block;
+   background: var(--bg-color);
+   padding:1.5rem 1rem;
+   font-size: 2rem;
+   color:var(--black);
+   margin-bottom: 2rem;
+   text-align: center;
+}
+.container{
+   max-width: 1200px;
+   padding:2rem;
+   margin:0 auto;
+}
+.product-display{
+   margin:2rem 0;
+   margin-left:100px;
+   margin-right:100px;
+   
+}
+
+.product-display .product-display-table{
+   width: 100%;
+   text-align: center;
+   
+}
+
+.product-display .product-display-table thead{
+   background: var(--bg-color);
+}
+
+.product-display .product-display-table th{
+   padding:1rem;
+   font-size: 2rem;
+}
+
+
+.product-display .product-display-table td{
+   padding:1rem;
+   font-size: 2rem;
+   border-bottom: var(--border);
+}
+
+.product-display .product-display-table .btn:first-child{
+   margin-top: 0;
+}
+
+.product-display .product-display-table .btn:last-child{
+   background: crimson;
+}
+
+.product-display .product-display-table .btn:last-child:hover{
+   background: var(--black);
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   .product-display{
+      overflow-y:scroll;
+   }
+
+   .product-display .product-display-table{
+      width: 80rem;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+}
+ *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-image: url("https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+</style>
+<div align="right">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/admin}" href="#">admin-home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/logout}" href="#">logout</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+</div>
+<div class="container">
+
+ <div class="product-display">
+      <table class="product-display-table">
+         <thead>
+         <tr>
+            <th>NoOF Coupons</th>
+            <th>Coupon Id</th>
+            <th>Coupon name</th>
+			   <th>Coupon code</th>
+            <th>Discount %</th>
+            <th>Expiry Data</th>
+            <th>Action</th>
+         </tr>
+         </thead>
+         
+         <tbody id="tbodyId">
+
+         </tbody>
+     
+      </table>
+   </div>
+</div>
+<script>
+
+   var couponData = []
+   window.onload = function () {
+      var xhr = new XMLHttpRequest()
+      xhr.onreadystatechange = function () {
+         if (xhr.readyState == XMLHttpRequest.DONE) {
+
+
+            var data = JSON.parse(xhr.responseText);
+            console.log(data);
+            couponData = data
+
+
+         }
+      }
+      xhr.open('GET', `http://localhost:9027/cpn/coupList`, true);
+      xhr.send(null);
+   }
+   function getCoupon() {
+      $('#tbodyId').empty()
+      couponData.forEach(function (e, index) {
+         $("#tbodyId").append(
+            `<tr>
+                   <th scope="row">${index + 1}</th>
+                   <td>${e.coupon_id}</td>
+                   <td>${e.coupon_name}</td>
+                   <td>${e.coupon_code}</td>
+                   <td>${e.discount_price}</td>
+                   <td>${e.expiry_date}</td>
+                   <td><input type="submit" onclick="deleteById(${e.coupon_id})" name="delete"  class="btn" value="Delete" </td>
+                 </tr>`
+         );
+      });
+     
+   };
+   function deleteById(coupon_id){
+var xhr = new XMLHttpRequest();
+xhr.open("DELETE", `http://localhost:9027/cpn/coupon/${coupon_id}`, true);
+xhr.setRequestHeader("Content-type", "application/json");
+xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4) {
+            if (xhr.status == 200) {
+               console.log("Success");
+               window.location.href = "./CouponList.html"
+            }
+         }
+      };
+xhr.send(coupon_id);
+
+       }
+
+</script>
+</body>
+</html>
